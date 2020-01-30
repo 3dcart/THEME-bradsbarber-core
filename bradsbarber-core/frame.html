@@ -17,7 +17,7 @@
 
     <!--START: page_styles-->
     <link rel="stylesheet" href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css" type="text/css" />
-    <link rel="StyleSheet" href="assets/templates/common-core/css/core.min.css" type="text/css" />
+    <link rel="StyleSheet" href="assets/templates/common-core/css/core.css" type="text/css" />
     [page_styles]
     <link rel="StyleSheet" href="assets/templates/[template]/css/[stylesheet]" type="text/css" />
     <!--END: page_styles-->
@@ -287,6 +287,15 @@
             </div>
         </div>
     </nav>
+
+    <div id="floating-cart" class="floating-cart">
+        <a href="view_cart.asp" class="minicart-inner clearfix">
+            <span class="icon-basket cart-icon"></span>
+            <span class="cart-details">
+                <span class="minicart-items" data-cart-totalitems></span> [frame_ITEMSINCART-text]
+            </span>
+        </a>
+    </div>
 
     <!--START: quickview_modal-->
     [quickview_modal]
