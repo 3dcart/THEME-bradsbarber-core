@@ -986,6 +986,15 @@ display:none;
 .navbar-inverse .navbar-nav > li > a:focus {
     color: #333;
 }
+.minicart-close > a  {
+    padding: 0 !important;
+}
+.minicart-actions a {
+    padding: 8px 12px !important;
+}
+.minicart-actions a.btn.btn-primary {
+    color: #ffffff;
+}
 
 @media (min-width: 992px) {
     div#navbar,
