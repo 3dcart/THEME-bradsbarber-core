@@ -907,8 +907,8 @@ Common page styles */
 }
 
 @media(max-width: 991px){
-    .top-nav, .navbar-wrapper{
-        
+    .navbar-wrapper{
+        display:none !important;
     }
 .hide-991{
 display:none;
@@ -958,7 +958,7 @@ display:none;
     .product-item .img {
         min-height: auto;
     }
-.top-nav, .navbar-wrapper {
+.top-nav {
     display: block !important;
     text-align: center;
 }
