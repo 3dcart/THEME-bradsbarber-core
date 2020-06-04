@@ -1,274 +1,314 @@
 <section id="home" class="home-page-content page-content">
-    <div class="container">
-        <div class="row">
-        <div class="col-md-3">
-            <!--START: LEFT BAR-->
-            <aside id="leftContent" class="leftContent col-lg-3 col-md-3 col-sm-12 center pull-left">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-3">
+		<!--START: LEFT BAR-->
+		<aside id="leftContent" class="leftContent col-lg-3 col-md-3 col-sm-12 center pull-left">
+
+		<!--START: LEFT_BAR_BLOCKS-->
+
+		<!--START: NEW_RELEASES_BLOCK-->
+		<div id="modNewReleases" class="sidebar-widget">
+			<h4 class="widget-header">[frame_new-releases]</h4>
+			<div class="widget-body">
+				<!--START: newreleases-->
+				<!--START: newreleases_topitem-->
+				<div class="new-release-item new-releases-item-first product-item">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="img"><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" class="img-responsive" /></a></div>
+						</div>
+						<div class="col-xs-12">
+							<div class="info">
+								<div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+								<!--START: product_review_average-->
+								<div class="reviews">
+									<span class="reviews-stars rating-[review_average]"></span> <span class="reviews-count">([review_count])</span>
+								</div>
+								<!--END: product_review_average-->
+								<div class="price">
+									<!--START: ITEMPRICE-->
+									<span class="regular-price">[ITEMPRICE]</span>
+									<!--END: ITEMPRICE-->
+									<!--START: SALEPRICE-->
+									<del class="regular-price">[ITEMPRICE]</del>
+									<span class="sale-price">[ITEMSALEPRICE]</span>
+									<!--END: SALEPRICE-->
+								</div>
+								<div class="action">
+									<a href="add_cart.asp?quick=1&amp;item_id=[catalogid]" class="add-to-cart btn btn-default">
+										<span class="buyitlink-text">Add To Cart</span>
+										<span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+										<span class="ajaxcart-added icon-ok"></span>
+									</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--END: newreleases_topitem-->
+
+				<!--START: newreleases_item-->
+				<div class="new-release-item product-item">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="img"><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" class="img-responsive" /></a></div>
+						</div>
+						<div class="col-xs-12">
+							<div class="info">
+								<div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+								<!--START: product_review_average-->
+								<div class="reviews">
+									<span class="reviews-stars rating-[review_average]"></span> <span class="reviews-count">([review_count])</span>
+								</div>
+								<!--END: product_review_average-->
+								<div class="price">
+									<!--START: ITEMPRICE-->
+									<span class="regular-price">[ITEMPRICE]</span>
+									<!--END: ITEMPRICE-->
+									<!--START: SALEPRICE-->
+									<del class="regular-price">[ITEMPRICE]</del>
+									<span class="sale-price">[ITEMSALEPRICE]</span>
+									<!--END: SALEPRICE-->
+								</div>
+								<div class="action">
+									<a href="add_cart.asp?quick=1&amp;item_id=[catalogid]" class="add-to-cart btn btn-default">
+										<span class="buyitlink-text">Add To Cart</span>
+										<span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+										<span class="ajaxcart-added icon-ok"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--END: newreleases_item-->
+				<!--END: newreleases-->
+			</div>
+		</div>
+		<!--END: NEW_RELEASES_BLOCK-->
+
+		<!--START: FRAME_BYPRICE-->
+		<div id="modPrice" class="sidebar-widget">
+			<h4 class="widget-header">[frame_byprice]</h4>
+			<div class="widget-body">
+				<ul>
+					<!--START: byprice_format-->
+					<li><a href="search_groups.asp?keyword=[id]&byprice=[id]" class="subcat">[title]</a></li>
+					<!--END: byprice_format-->
+				</ul>
+			</div>
+		</div>
+		<!--END: FRAME_BYPRICE-->
+
+		<!--START: FRAME_MANUFACTURER-->
+		<div id="modManufacturer" class="sidebar-widget">
+			<h4 class="widget-header">[frame_manufacturer]</h4>
+			<div class="widget-body">
+				<form name="mfg" id="mfg" method="get" action="search_groups.asp">
+					<div class="manf-select">
+						<select name="manf" onchange="this.form.submit();" class="form-control">
+							<option value="0" selected="selected">Manufacturer</option>
+							<!--START: manufacturer_format-->
+							<option value="[mfgid]">[manufacturer]</option>
+							<!--END: manufacturer_format-->
+						</select>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--END: FRAME_MANUFACTURER-->
+
+		<!--START: LEFT_BANNER-->
+		<div id="leftBanner" class="sidebar-widget">[LEFT_BANNER]</div>
+		<!--END: LEFT_BANNER--> 
+
+		<!--END: LEFT_BAR_BLOCKS-->
+		</aside>
+		 <!--END: LEFT BAR-->
+	</div>
+	
+	<div class="col-md-9">
+	
+    <section class="homepage-slider">
+		<!--START: home_carousel-->
+		<div class="homeCarousel flexslider" data-animation="[hc_effect]" data-slideshowspeed="[hc_delay]">
+			<ul class="slides">
+				<!--START: carousel-->
+				<li><a href="[link]"><img src="[image]" alt="" /></a></li>
+				<!--END: carousel-->
+			</ul>
+		</div>
+		<!--END: home_carousel-->
+    </section>
+
+    <!--START: CATEGORY_HEADER-->
+    <section class="category-header content-section">
+         <div class="content tc-pagebuilder">[CONTENT]</div>
+    </section>
+    <!--END: CATEGORY_HEADER-->
+
+	<!--START: FEATURE_MENU-->
+    <section class="products-section">
             
-                
+		<h2 class="header-specials">[category_Header-specials]</h2>
+
+		<div class="product-carousel flexslider">
+			<!--START: CATEGORY_ITEMS-->
+			<ul class="product-items slides" data-productcols="[product-cols-number]" >
+				<!--START: ITEM_TEMPLATE_0-->
+				<li>
+				[product_items]
+				</li>
+				<!--END: ITEM_TEMPLATE_0-->
+			</ul>
+			<!--END: CATEGORY_ITEMS-->
+		</div>
             
-               <!--START: LEFT_BAR_BLOCKS-->
+    </section>
+	<!--END: FEATURE_MENU-->
 
-<!--START: NEW_RELEASES_BLOCK-->
-<div id="modNewReleases" class="sidebar-widget">
-    <h4 class="widget-header">[frame_new-releases]</h4>
-    <div class="widget-body">
-        <!--START: newreleases-->
-        <!--START: newreleases_topitem-->
-        <div class="new-release-item new-releases-item-first product-item">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="img"><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" class="img-responsive" /></a></div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="info">
-                        <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
-                        <!--START: product_review_average-->
-                        <div class="reviews">
-                            <span class="reviews-stars rating-[review_average]"></span> <span class="reviews-count">([review_count])</span>
-                        </div>
-                        <!--END: product_review_average-->
-                        <div class="price">
-                            <!--START: ITEMPRICE-->
-                            <span class="regular-price">[ITEMPRICE]</span>
-                            <!--END: ITEMPRICE-->
-                            <!--START: SALEPRICE-->
-                            <del class="regular-price">[ITEMPRICE]</del>
-                            <span class="sale-price">[ITEMSALEPRICE]</span>
-                            <!--END: SALEPRICE-->
-                        </div>
-                        <div class="action">
-                            <a href="add_cart.asp?quick=1&amp;item_id=[catalogid]" class="add-to-cart btn btn-default">
-                                <span class="buyitlink-text">Add To Cart</span>
-                                <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
-                                <span class="ajaxcart-added icon-ok"></span>
-                            </a>
-                        </div>
+	<!--START: TOP_SELLERS_BLOCK-->
+	<div id="modTopSellers" class="products-section">
+		<h2 class="header-specials">[frame_top-sellers]</h2>
 
-                    </div>
-                </div>
-            </div>
+		<div class="product-carousel flexslider">
+			<ul class="product-items slides" data-productcols="[product-cols-number]" >
+				<!--START: topsellers-->
+				<!--START: topsellers_topitem-->
+				<li>
+					[product_items]
+				</li>
+				<!--END: topsellers_topitem-->
+
+				<!--START: topsellers_item-->
+				<li>
+					[product_items]
+				</li>
+				<!--END: topsellers_item-->
+				<!--END: topsellers-->
+			</ul>
+		</div>
+	</div>
+	<!--END: TOP_SELLERS_BLOCK--> 
+
+    <!--START: HOMEPAGE_BLOGS-->
+	<div class="homepage-blog-posts products-section">
+		<h2 class="header-specials">[blog_recentposts]</h2>
+		<ul class="blogList clearfix">
+			<!--START: blog_post-->
+			<li class="blogPost [blog_class]">
+				<!--START: post_image-->
+				<div class="post-image">
+					<div class="post-image-container">
+						<a href="[pagename]" title="[subject]">  
+							<img src="[post_image]" alt="[subject]" class="img-responsive" />
+						</a>
+					</div>
+				</div>			            
+				<!--END: post_image-->
+				<div class="post-content">
+					<!--START: post_title-->
+					<h3><a href="[pagename]" title="[subject]">[subject]</a></h3>
+					<!--END: post_title-->
+
+					<div id="postContent" class="post" data-articleID="[post_id]">
+						[post]
+					</div>
+
+					<div class="post-info clearfix">
+						<div class="postDate">
+							[post_date]
+						</div>
+						<!--START: read-more-->
+						<div class="post-readmore">
+							<a href="[pagename]" title="[subject]" class="btn btn-default">[blog_read-more]</a>
+						</div>
+						<!--END: read-more-->
+					</div>
+				</div>
+			</li>
+			<!--END: blog_post-->
+		</ul>
+	</div>
+    <!--END: HOMEPAGE_BLOGS-->
+
+    <!--START: CATEGORY_FOOTER-->
+    <section class="category-footer content-section">
+        <div class="container">
+            <div class="content tc-pagebuilder">[CONTENT]</div>
         </div>
-        <!--END: newreleases_topitem-->
-
-        <!--START: newreleases_item-->
-        <div class="new-release-item product-item">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="img"><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" class="img-responsive" /></a></div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="info">
-                        <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
-                        <!--START: product_review_average-->
-                        <div class="reviews">
-                            <span class="reviews-stars rating-[review_average]"></span> <span class="reviews-count">([review_count])</span>
-                        </div>
-                        <!--END: product_review_average-->
-                        <div class="price">
-                            <!--START: ITEMPRICE-->
-                            <span class="regular-price">[ITEMPRICE]</span>
-                            <!--END: ITEMPRICE-->
-                            <!--START: SALEPRICE-->
-                            <del class="regular-price">[ITEMPRICE]</del>
-                            <span class="sale-price">[ITEMSALEPRICE]</span>
-                            <!--END: SALEPRICE-->
-                        </div>
-                        <div class="action">
-                            <a href="add_cart.asp?quick=1&amp;item_id=[catalogid]" class="add-to-cart btn btn-default">
-                                <span class="buyitlink-text">Add To Cart</span>
-                                <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
-                                <span class="ajaxcart-added icon-ok"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--END: newreleases_item-->
-        <!--END: newreleases-->
-    </div>
-</div>
-<!--END: NEW_RELEASES_BLOCK-->
-
-<!--START: FRAME_BYPRICE-->
-<div id="modPrice" class="sidebar-widget">
-    <h4 class="widget-header">[frame_byprice]</h4>
-    <div class="widget-body">
-        <ul>
-            <!--START: byprice_format-->
-            <li><a href="search_groups.asp?keyword=[id]&byprice=[id]" class="subcat">[title]</a></li>
-            <!--END: byprice_format-->
-        </ul>
-    </div>
-</div>
-<!--END: FRAME_BYPRICE-->
-
-<!--START: FRAME_MANUFACTURER-->
-<div id="modManufacturer" class="sidebar-widget">
-    <h4 class="widget-header">[frame_manufacturer]</h4>
-    <div class="widget-body">
-        <form name="mfg" id="mfg" method="get" action="search_groups.asp">
-            <div class="manf-select">
-                <select name="manf" onchange="this.form.submit();" class="form-control">
-                    <option value="0" selected="selected">Manufacturer</option>
-                    <!--START: manufacturer_format-->
-                    <option value="[mfgid]">[manufacturer]</option>
-                    <!--END: manufacturer_format-->
-                </select>
-            </div>
-        </form>
-    </div>
-</div>
-<!--END: FRAME_MANUFACTURER-->
-
-<!--START: LEFT_BANNER-->
-<div id="leftBanner" class="sidebar-widget">[LEFT_BANNER]</div>
-<!--END: LEFT_BANNER--> 
-
-<!--END: LEFT_BAR_BLOCKS-->
-            </aside>
-             <!--END: LEFT BAR-->
-        </div>
-    
-        <div class="col-md-9">
-        <section class="homepage-slider">
-                <!--START: home_carousel-->
-                <div class="homeCarousel flexslider" data-animation="[hc_effect]" data-slideshowspeed="[hc_delay]">
-                    <ul class="slides">
-                        <!--START: carousel-->
-                        <li><a href="[link]"><img src="[image]" alt="" /></a></li>
-                        <!--END: carousel-->
-                    </ul>
-                </div>
-                <!--END: home_carousel-->
-        </section>
-    
-        <!--START: CATEGORY_HEADER-->
-        <section class="category-header content-section">
-            <div class="container">
-                <div class="content tc-pagebuilder">[CONTENT]</div>
-            </div>
-        </section>
-        <!--END: CATEGORY_HEADER-->
-    
-        <section class="products-section">
-                <!--START: FEATURE_MENU-->
-                <h2 class="header-specials">[category_Header-specials]</h2>
-    
-                <!--START: CATEGORY_ITEMS-->
-                <div class="product-items product-items-[product-cols-number]">
-                    <!--START: ITEM_TEMPLATE_0-->
-                    [product_items]
-                    <!--END: ITEM_TEMPLATE_0-->
-                </div>
-                <!--END: CATEGORY_ITEMS-->
-                <!--END: FEATURE_MENU-->
-        </section>
-    
-    
-    
-        <!--START: CATEGORY_FOOTER-->
-        <section class="category-footer content-section">
-            <div class="container">
-                <div class="content tc-pagebuilder">[CONTENT]</div>
-            </div>
-        </section>
-        <!--END: CATEGORY_FOOTER-->
-        </div>
-        </div>
-    </div>
+    </section>
+    <!--END: CATEGORY_FOOTER-->
+	</div>
+	</div>
+	</div>
 </section>
-
-
-
-<!--START: TOP_SELLERS_BLOCK-->
-<section id="modTopSellers" class="home_history">
-    <div class="container">
-    <div class="header">
-        <h3>[frame_top-sellers]</h3>
-    </div>
-    
-    <div class="product-carousel flexslider flexslider2">
-        <ul class="product-items product-items-[product-cols-number] slides">
-            <!--START: topsellers-->
-            
-            <!--START: topsellers_topitem-->
-            <li class="product-item" data-catalogid="[catalogid]" data-ajaxcart="1" data-addcart-callback="addcart_callback">
-                <div class="img">
-                    <a href="product.asp?itemid=[catalogid]">
-                        <img src="[thumbnail]" alt="[name]" class="img-responsive" />
-                    </a>
-                    <!--START: quickview-->
-                    <button class="quickview" data-toggle="modal">Quick View</button>
-                    <!--END: quickview-->
-                </div>
-
-                <div class="reviews">
-                    <!--START: product_review-->
-                    <!--START: product_review_average-->
-                    <span class="reviews-stars rating-[review_average]"></span> <span class="reviews-count">([review_count])</span>
-                    <!--END: product_review_average-->
-                    <!--END: product_review-->
-                </div>
-                
-                <div class="name">
-                    <a href="product.asp?itemid=[catalogid]">[name]</a>
-                </div>
-            </li>
-            <!--END: topsellers_topitem-->
-            
-            <!--START: topsellers_item-->
-            <li class="product-item" data-catalogid="[catalogid]" data-ajaxcart="1" data-addcart-callback="addcart_callback">
-                <div class="img">
-                    <a href="product.asp?itemid=[catalogid]">
-                        <img src="[THUMBNAIL]" alt="[name]" class="img-responsive" />
-                    </a>
-                    <!--START: quickview-->
-                    <button class="quickview" data-toggle="modal">Quick View</button>
-                    <!--END: quickview-->
-                </div>
-
-                <div class="reviews">
-                    <!--START: product_review-->
-                    <!--START: product_review_average-->
-                    <span class="reviews-stars rating-[review_average]"></span> <span class="reviews-count">([review_count])</span>
-                    <!--END: product_review_average-->
-                    <!--END: product_review-->
-                </div>
-                
-                <div class="name">
-                    <a href="product.asp?itemid=[catalogid]">[name]</a>
-                </div>
-            </li>
-            <!--END: topsellers_item-->
-            
-            <!--END: topsellers-->
-            
-            
-        </ul>
-    </div>
-    
-    
-    
-    </div>
-</section>
-<!--END: TOP_SELLERS_BLOCK--> 
 
 <!--START: template_scripts-->
 <script type="text/javascript" src="/assets/templates/common-core/lib/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" charset="utf-8">
-    jQuery(function () {
-        jQuery('.homeCarousel').flexslider({
-            animation: jQuery(this).data('animation'),
-            slideshowSpeed: jQuery(this).data('slideshowSpeed'),
+	jQuery(function () {
+		
+		// Homepage Carousel
+		jQuery('.homeCarousel').flexslider({
+            animation: jQuery('.homeCarousel').attr('data-animation'),
+			slideshow: true,
+            slideshowSpeed: jQuery('.homeCarousel').attr('data-slideshowspeed'),
             controlNav: false,
             keyboard: false
         });
-    });
+		
+		// Product Scroll
+		// store the slider in a local variable
+		var $window = jQuery(window),
+			flexslider = { vars: {} };
+
+		// tiny helper function to add breakpoints
+		function getGridSize() {
+			var proCol = jQuery(".product-carousel > ul.slides").attr("data-productcols");
+			return (window.innerWidth <= 567) ? 1 :
+				   (window.innerWidth < 992) ? 2 : proCol;
+		}
+
+		$window.on("load", function () {
+			jQuery('.product-carousel').flexslider({
+				animation: "slide",
+				controlNav: false,
+				keyboard: false,
+				itemWidth: 210,
+				itemMargin: 0,
+				minItems: getGridSize(), // use function to pull in initial value
+				maxItems: getGridSize() // use function to pull in initial value
+
+			});
+			
+			setTimeout(function () {
+				window.dispatchEvent(new Event('resize'));
+			}, 100);
+		});
+
+		// check grid size on resize event
+		$window.resize(function () {
+			var gridSize = getGridSize();
+
+			flexslider.vars.minItems = gridSize;
+			flexslider.vars.maxItems = gridSize;
+
+		});
+		jQuery(document).ready(function(){
+			setTimeout(function () {
+				window.dispatchEvent(new Event('resize'));
+			}, 1000);
+		});
+		
+	}());
+	
 </script>
 <!--END: template_scripts-->
 
 <!--START: template_styles-->
 <link rel="stylesheet" href="/assets/templates/common-core/lib/flexslider/flexslider.css" type="text/css" media="screen" />
+<link href="assets/templates/common-core/lib/contentbuilder/minimalist-blocks/content.min.css" rel="stylesheet" type="text/css" />
 <!--END: template_styles-->
