@@ -135,6 +135,12 @@ jQuery(document).ready(function () {
             location.href = this.href;
         });
     }
+	if (respWidth < 767) {
+
+        jQuery('#categories a').click(function () {
+            location.href = this.href;
+        });
+    }
 
 });
 
