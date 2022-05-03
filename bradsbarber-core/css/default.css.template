@@ -945,8 +945,8 @@ h1.page_headers{
 }
 
 @media(max-width: 991px){
-    .top-nav, .navbar-wrapper{
-        
+    .navbar-wrapper{
+        display:none !important;
     }
 .hide-991{
 display:none;
