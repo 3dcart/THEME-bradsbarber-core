@@ -1,7 +1,7 @@
 /*
 ** Bootstrap over-rides
 */
-
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap');
 body {
 	display: flex;
 	height: 100%;
@@ -25,6 +25,25 @@ footer {
 }
 .product-items.productList .product-item .product-content .name{
 	text-align:left;
+}
+.antiCls { 
+    visibility: hidden; 
+}
+#skip a{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+#skip a:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}
+.homeCarousel.flexslider .slides img {
+    width: 100%;
 }
 @media (max-width: 991px){
 .product-items.productList .product-item .img {
@@ -324,10 +343,13 @@ ul.extrapages li a {
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
-    color: #626262;
+    color: #000;
     font-size: 14px;
     font-weight: 500;
     background-color: #ffe55c;
+}
+.copyright a{
+    color:#000;
 }
 .copyright p{
     margin: 5px 0;
@@ -543,6 +565,7 @@ span.freeshipping {
 }
 .widget-body a{
     font-weight: 600;
+    color:#000;
 }
 .widget-header{
     position: relative;
