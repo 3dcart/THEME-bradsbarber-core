@@ -1020,7 +1020,7 @@ display:none;
         min-height: auto;
 		padding:0;
     }
-.top-nav, .navbar-wrapper {
+.top-nav {
     display: block !important;
     text-align: center;
 }
